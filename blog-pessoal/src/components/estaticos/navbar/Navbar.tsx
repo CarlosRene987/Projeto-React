@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Button } from '@material-ui/core';
 import { Box } from '@mui/material';
 import './Navbar.css'
 import { Link } from 'react-router-dom'
@@ -8,7 +8,7 @@ function Navbar() {
         <>
              <AppBar position="static">
                  <Toolbar variant="dense" className='container'>
-                     <Box className='cursor' >
+                     <Box paddingX= {20} className='cursor' >
                          <Typography variant="h5" color="inherit">
                              Blog Pessoal
                          </Typography>
@@ -37,14 +37,20 @@ function Navbar() {
                              <Typography variant="h6" color="inherit">
                                  Cadastrar Tema
                              </Typography>
+                             
                          </Box>
-                         {/* <Link to='/login' className='text-decoration-none'>
-                             <Box mx={1} className='cursor'>
-                                 <Typography variant="h6" color="inherit">
-                                     logout
-                                 </Typography>
-                             </Box>
-                         </Link> */}
+                         
+
+                         <Box paddingX= {15} mx={1} className='cursor'>
+                         <Link to='/home' className='text-decorator-none'>
+                                <Button type='submit' variant='contained' color='primary'>
+                                    Entrar
+                                </Button>
+                            </Link>
+                             
+                         </Box>
+                         
+                        
                      </Box>
                  </Toolbar>
              </AppBar>
