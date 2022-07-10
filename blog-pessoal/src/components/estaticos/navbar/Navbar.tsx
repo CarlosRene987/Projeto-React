@@ -15,25 +15,28 @@ function Navbar() {
                      </Box>
 
                      <Box display="flex" justifyContent="start">
-                         <Box mx={1} className='cursor'>
-                             <Typography variant="h6" color="inherit">
-                                 Home
-                             </Typography>
+                         <Box paddingX= {3} mx={1} className='cursor'>
+                         <Link to='/home' className='text-decorator-none'>
+                                <Button type='submit' variant='contained' color='primary'>
+                                    Home
+                                </Button>
+                            </Link>
+                             
                          </Box>
 
-                         <Box mx={1} className='cursor'>
+                         <Box paddingX= {3} mx={1} className='cursor'>
                              <Typography variant="h6" color="inherit">
                                  Postagens
                              </Typography>
                      </Box>
 
-                         <Box mx={1} className='cursor'>
+                         <Box paddingX= {3} mx={1} className='cursor'>
                              <Typography variant="h6" color="inherit">
                                  Temas
                              </Typography>
                          </Box>
 
-                         <Box mx={1} className='cursor'>
+                         <Box paddingX= {3} mx={1} className='cursor'>
                              <Typography variant="h6" color="inherit">
                                  Cadastrar Tema
                              </Typography>
@@ -41,8 +44,8 @@ function Navbar() {
                          </Box>
                          
 
-                         <Box paddingX= {15} mx={1} className='cursor'>
-                         <Link to='/home' className='text-decorator-none'>
+                         <Box paddingX= {3} mx={1} className='cursor'>
+                         <Link to='/Login' className='text-decorator-none'>
                                 <Button type='submit' variant='contained' color='primary'>
                                     Entrar
                                 </Button>

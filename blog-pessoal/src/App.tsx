@@ -7,9 +7,11 @@ import Footer from './components/estaticos/footer/Footer';
 import Home from './paginas/home/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './paginas/login/Login';
+import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 
 
-function App() {
+function App() 
+{
   return (
     <Router>
       <Navbar />
@@ -20,6 +22,8 @@ function App() {
         <Route path="/home" element={<Home />} />
 
         <Route path="/login" element={<Login />} />
+
+        <Route path="/CadastroUsuario" element={<CadastroUsuario />} />
 
       </Routes>
       <Footer />
