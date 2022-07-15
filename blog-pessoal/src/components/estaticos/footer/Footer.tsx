@@ -48,6 +48,7 @@ function Footer() {
                             <a
                                 href="https://github.com/CarlosRene987" >
                                 <GitHubIcon className='redes' />
+                                
                             </a>
                         </Box>
 

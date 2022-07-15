@@ -2,8 +2,10 @@
 import React from 'react';
 import { Grid, Button, Typography} from '@material-ui/core';  
 import { Box } from '@mui/material';
-
+import { Link } from 'react-router-dom';
+import '../../components/postagens/tabpostagem/TabPostagem'
 import './Home.css';
+import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
 
 function Home() {
     return (
@@ -16,14 +18,28 @@ function Home() {
                     </Box>
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
+                          
                         </Box>
-                        <Button variant="outlined" style={{ borderColor: "white", backgroundColor: "#3F51B5", color: "white" }}>Ver Postagens</Button>
-                    </Box>
+                        
+                        <Box paddingX= {3} mx={1} className='cursor'>
+                         <Link to='/posts' className='postagemhome'>
+                         
+                                <Button type='submit' variant='contained' color='primary' >
+                                   Ver Postagens
+                                </Button>
+                            </Link>
+                             
+                         </Box>
+                         
+                        
+                        
+                   </Box>
                 </Grid>
                 <Grid item xs={6} >
                     <img src="https://i.imgur.com/H88yIo2.png" alt="" width="500px" height="500px" />
                 </Grid>
                 <Grid xs={12} style={{ backgroundColor: "white" }}>
+                < TabPostagem />
                 </Grid>
             </Grid>
         </>
