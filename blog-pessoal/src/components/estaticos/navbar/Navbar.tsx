@@ -48,16 +48,17 @@ function Navbar() {
                              
                          </Box>
                         
+                
                          <Box paddingX= {3} mx={1} className='cursor'>
-                             <Typography variant="h6" color="inherit">
-                                 Cadastrar Tema
-                             </Typography>
-
-                             
-                             
-
+                         <Link to='/formularioTema' className='text-decorator-none'>
+                                <Button type='submit' variant='contained' color='primary'>
+                                    Cadastrar Tema
+                                </Button>
+                            </Link>
                              
                          </Box>
+                         
+
                          <Box paddingX= {3} mx={1} className='cursor'>
                          <Link to='/temas' className='text-decorator-none'>
                                 <Button type='submit' variant='contained' color='primary'>

@@ -1,13 +1,27 @@
-
 import React from 'react';
 import { Grid, Button, Typography} from '@material-ui/core';  
 import { Box } from '@mui/material';
-import { Link } from 'react-router-dom';
-import '../../components/postagens/tabpostagem/TabPostagem'
-import './Home.css';
+import { Link, useNavigate } from 'react-router-dom';
 import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
+import useLocalStorage from 'react-use-localstorage';
+import './Home.css';
+import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem'
+import { useEffect } from 'react';
 
-function Home() {
+function Home() {  
+    
+    let navigate = useNavigate();
+    const [token, setToken] = useLocalStorage('token');
+    
+    useEffect(() => {
+      if (token == "") {
+          alert("Você precisa estar logado")
+          navigate("/login")
+  
+      }
+  }, [token])
+
+
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "#3F51B5" }}>
@@ -18,7 +32,7 @@ function Home() {
                     </Box>
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
-                          
+                        <ModalPostagem />
                         </Box>
                         
                         <Box paddingX= {3} mx={1} className='cursor'>
